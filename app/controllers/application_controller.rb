@@ -17,7 +17,6 @@ class App < Sinatra::Base
 
       @team.members = Member.all
 
-      # erb :super_hero, :layout => :team
       erb :super_hero, :layout => :team 
     end
 
