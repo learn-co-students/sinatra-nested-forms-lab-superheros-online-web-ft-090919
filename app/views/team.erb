@@ -1,3 +1,14 @@
+<h1>Superhero Teams</h1>
+<img src="https://cdn.mos.cms.futurecdn.net/W4jtWcrdC3cdt7kEsjCCpg-1024-80.jpg">
+<h2> Team Name: <b> <%= @team.name %> </b></h2>
+<h3> Team Motto: <%= @team.motto %> </h3>
 
-
-
+<br><b>Heros</b>
+<ul>
+<% @heros.each do |hero| %>
+  <br><h3><li>Hero Name: <%= hero.name %></li></h3>
+  <br>Hero Power: <%= hero.power %>
+  <br>Hero Biography: <%= hero.bio %>
+  <br>
+  <% end %>
+  </ul>
