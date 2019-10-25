@@ -18,15 +18,16 @@ describe App do
   describe 'POST /teams' do
     it 'submits the form' do
       visit '/'
+
       fill_in("team[name]", :with => "Team Ruby")
       fill_in("team[motto]", :with => "We love Ruby!")
-      fill_in("member1_name", :with => "Amanda")
+      fill_in(id="member1_name", :with => "Amanda")
       fill_in("member1_power", :with => "Ruby")
       fill_in("member1_bio", :with => "I love Ruby!")
-      fill_in("member2_name", :with => "Arel")
+      fill_in(id="member2_name", :with => "Arel")
       fill_in("member2_power", :with => "JavaScript")
       fill_in("member2_bio", :with => "I love JavaScript!")
-      fill_in("member3_name", :with => "Katie")
+      fill_in(id="member3_name", :with => "Katie")
       fill_in("member3_power", :with => "Sinatra")
       fill_in("member3_bio", :with => "I love Sinatra!")
       click_button 'submit'
@@ -43,6 +44,6 @@ describe App do
       expect(page).to have_text("Hero Power: Sinatra")
       expect(page).to have_text("Hero Biography: I love Sinatra!")
     end
-  end
+ end
   
 end
