@@ -1,9 +1,11 @@
+require 'pry'
 class Superhero
   attr_reader :name, :power, :biograpy
 
  @@all = []
 
   def initialize(params)
+    binding.pry
     @name = params[:name]
     @power = params[:power]
     @biograpy = params[:biograpy]
