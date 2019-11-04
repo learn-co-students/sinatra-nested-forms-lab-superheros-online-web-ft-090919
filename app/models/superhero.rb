@@ -1,13 +1,13 @@
 require 'pry'
 class Superhero
-  attr_reader :name, :power, :biograpy
+  attr_reader :name, :power, :biography
 
  @@all = []
 
   def initialize(params)
     @name = params[:name]
     @power = params[:power]
-    @biograpy = params[:biograpy]
+    @biography = params[:biography]
     @@all << self
   end
 
