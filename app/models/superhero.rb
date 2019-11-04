@@ -5,7 +5,6 @@ class Superhero
  @@all = []
 
   def initialize(params)
-    binding.pry
     @name = params[:name]
     @power = params[:power]
     @biograpy = params[:biograpy]
